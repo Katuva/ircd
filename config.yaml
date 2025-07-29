@@ -1,0 +1,21 @@
+server:
+  name: "MyIRCd"
+  port: 6667
+  bind_address: "0.0.0.0"
+  max_connections: 1000
+
+logging:
+  level: "DEBUG"
+  file: "ircd.log"
+  console: true
+
+features:
+  motd_file: "motd.txt"
+  ping_timeout: 120
+  max_channels_per_user: 100
+
+ssl:
+  enabled: false
+  cert_file: ""
+  key_file: ""
+  port: 6697
