@@ -1,5 +1,4 @@
-#ifndef CONFIG_HPP
-#define CONFIG_HPP
+#pragma once
 
 #include <fkYAML/node.hpp>
 #include <string>
@@ -148,5 +147,3 @@ std::unique_ptr<Config> Config::instance = nullptr;
 #define CONFIG_GET_DEFAULT(key, type, default_val) Config::getInstance().get<type>(key, default_val)
 #define CONFIG_GET_NESTED(path, type) Config::getInstance().getNested<type>(path)
 #define CONFIG_GET_NESTED_DEFAULT(path, type, default_val) Config::getInstance().getNested<type>(path, default_val)
-
-#endif
